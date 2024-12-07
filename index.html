@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Study Planner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📚 Study Planner</h1>
+      <p>Manage tasks, set alarms, and track progress</p>
+    </header>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+      <label>
+        <input type="checkbox" id="theme-switch" />
+        <span class="slider"></span>
+        <span class="theme-label">Dark Mode</span>
+      </label>
+    </div>
+
+    <!-- Task Form -->
+    <div class="form-group">
+      <input type="text" id="task-input" placeholder="Task name..." />
+      <input type="date" id="deadline-input" />
+      <input type="time" id="alarm-time-input" placeholder="Set alarm" />
+      <select id="category-input">
+        <option value="Math">Math</option>
+        <option value="Science">Science</option>
+        <option value="Programming">Programming</option>
+        <option value="Others">Others</option>
+      </select>
+      <select id="priority-input">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <button id="add-task-btn">Add Task</button>
+    </div>
+
+    <!-- Search and Filter -->
+    <div class="filter-group">
+      <input type="text" id="search-input" placeholder="Search tasks..." />
+      <select id="filter-priority">
+        <option value="All">All Priorities</option>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <select id="filter-category">
+        <option value="All">All Categories</option>
+        <option value="Math">Math</option>
+        <option value="Science">Science</option>
+        <option value="Programming">Programming</option>
+        <option value="Others">Others</option>
+      </select>
+    </div>
+
+    <!-- Task List -->
+    <section id="task-list-container">
+      <h2>Your Tasks</h2>
+      <progress id="progress-bar" value="0" max="100"></progress>
+      <ul id="task-list"></ul>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

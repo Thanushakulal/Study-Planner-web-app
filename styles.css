@@ -1,0 +1,139 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: background 0.3s ease;
+  }
+  
+  :root {
+    --bg-gradient: linear-gradient(135deg, #6a11cb, #2575fc);
+    --text-color: #fff;
+    --card-bg: #ffffff;
+    --button-gradient: linear-gradient(135deg, #ff7e5f, #feb47b);
+    --dark-bg: #1c1c1c;
+    --dark-text: #e0e0e0;
+  }
+  
+  body.dark {
+    --bg-gradient: var(--dark-bg);
+    --text-color: var(--dark-text);
+    --card-bg: #333333;
+  }
+  
+  /* Header */
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+  }
+  
+  header p {
+    font-size: 1rem;
+    color: #cccccc;
+  }
+  
+  /* Theme Toggle */
+  .theme-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .theme-toggle label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+  
+  .theme-toggle .slider {
+    width: 40px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 50px;
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+  
+  .theme-toggle input:checked + .slider {
+    background: #4caf50;
+  }
+  
+  .theme-label {
+    color: var(--text-color);
+  }
+  
+  /* Form Group */
+  .form-group,
+  .filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  input, select, button {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+  }
+  
+  button {
+    background: var(--button-gradient);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  button:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Task List */
+  #task-list-container h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+  }
+  
+  #task-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    background: var(--card-bg);
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+  }
+  
+  .task-item:hover {
+    transform: scale(1.03);
+  }
+  
+  .task-item button {
+    background: #dc3545;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
